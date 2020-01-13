@@ -1,0 +1,21 @@
+1. If you have a new AWS account you can get an instance for free, a small one though, so we can use that size to get you up and running.  Then what would happen is when you actually need to scale up to run real samples you set the size of the isntance to huge ram and cores.
+
+2.  Create an AWS account.
+
+3. Create your first small instance you'll be able to do taht by going to this URL:
+https://us-west-2.console.aws.amazon.com/ec2/v2/home?region=us-west-2#Home:
+this is specific to the us-west-2 
+
+4. Then you can go to this URL:
+https://us-west-2.console.aws.amazon.com/ec2/v2/home?region=us-west-2#Instances:sort=instanceId
+
+5. On the top you can click launch instance now you can base your computer off an existing image
+you'll want to do it based upon Windows Server 2019 Microsoft Windows Server 2019 Base. Start off with t2.micro 
+what you'll also need to think about is how big the HDD needs to be default is 30GB.
+
+6. What you'll also run into is they will ask you for a PEM file which you'll need to generate with AWS. It should link you to the right place basically its an ssh key you'll need to make one on their site. Call it like EXAMPLE_KEY or something like that.  This is your bearer token to prove you are who you are you'll get a file that is the bearer object don't share this with anyone if someone has this, its super bad so keep it on your computer you'll be using this to be able to figure out the password to get into the machine
+
+7. So I think you can transfer here is the procedure.  You can create an image of your machine its called an AMI.
+8. Then you grant permission to that AMI to EXAMPLE lab.
+9. Then they create a new machine from that AMI and the passwords will be the same as the original.
+10. So essentially a clone, and then you destroy your machine, and then delete the AMI, so you don't have to pay for it anymore.
