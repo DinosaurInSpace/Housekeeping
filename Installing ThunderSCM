@@ -1,0 +1,9 @@
+https://thundersvm.readthedocs.io/en/latest/get-started.html
+
+cd./thundersvm
+mkdir build && cd build && cmake -DCMAKE_CXX_COMPILER=/usr/bin/g++ -DCMAKE_C_COMPILER=/usr/bin/gcc -DUSE_CUDA=OFF -DUSE_EIGEN=ON .. && make -j
+
+cd./thundersvm/build
+mkdir build && cd build cmake -DCMAKE_CXX_COMPILER=/usr/bin/g++ -DCMAKE_C_COMPILER=/usr/bin/gcc -DUSE_CUDA=OFF -DUSE_EIGEN=ON .. && make -j
+
+error: 'Could NOT find OpenMP_C (missing: OpenMP_C_FLAGS OpenMP_C_LIB_NAMES)'
