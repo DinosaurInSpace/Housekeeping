@@ -7,3 +7,11 @@ cd./thundersvm/build
 mkdir build && cd build cmake -DCMAKE_CXX_COMPILER=/usr/bin/g++ -DCMAKE_C_COMPILER=/usr/bin/gcc -DUSE_CUDA=OFF -DUSE_EIGEN=ON .. && make -j
 
 error: 'Could NOT find OpenMP_C (missing: OpenMP_C_FLAGS OpenMP_C_LIB_NAMES)'
+
+Usually /usr/bin/g++ and /usr/bin/gcc are Xcode's Clang-based compiler, which probably behaves differently than expected. 
+If you install gcc with brew install gcc then you should be able to use /usr/local/bin/g++-9 and /usr/local/bin/gcc-9 instead.
+Also, they don't make this clear, but you do need to do brew install libomp even if you don't want GPU
+
+mkdir build && cd build cmake -DCMAKE_CXX_COMPILER=/usr/local/bin/g++-9 -DCMAKE_C_COMPILER=/usr/local/bin/gcc-9 -DUSE_CUDA=OFF -DUSE_EIGEN=ON .. && make -j
+
+That worked!
