@@ -15,3 +15,7 @@ Also, they don't make this clear, but you do need to do brew install libomp even
 mkdir build && cd build cmake -DCMAKE_CXX_COMPILER=/usr/local/bin/g++-9 -DCMAKE_C_COMPILER=/usr/local/bin/gcc-9 -DUSE_CUDA=OFF -DUSE_EIGEN=ON .. && make -j
 
 That worked!
+
+Next, build Python in the python library folder.
+
+Still issues?
